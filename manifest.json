@@ -1,0 +1,8 @@
+{
+  "name": "Ai Prompt Designer",
+  "short_name": "ai-prompt-de",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1"
+}
