@@ -3,7 +3,7 @@
   "short_name": "ai-prompt-de",
   "start_url": "/ai-prompt-designer/",
   "display": "standalone",
-  "background_color": "#6366f1",
+  "background_color": "#ffffff",
   "theme_color": "#7c3aed",
   "scope": "/ai-prompt-designer/"
 }
