@@ -3,11 +3,23 @@
 ## 概要
 
 **サービス名**: Ai Prompt Designer
-**バージョン**: 1.0.0
-**更新日**: 2026-05-27
+**バージョン**: 1.1.0
+**更新日**: 2026-05-29
 **URL**: https://appadaycreator.com/ai-prompt-designer/
 
 目的・ジャンル・出力形式を選ぶだけで効果的なAIプロンプトを自動生成。ChatGPT・Claude対応。登録不要・完全無料でご利用いただけます。
+
+## 変更履歴
+
+### v1.1.0 (2026-05-29)
+- P1: PWA theme-color を #7c3aed → #6366f1 に統一（manifest.json / meta theme-color / CSS）
+- P2: プロンプト生成ロジック強化（AIツール別ペルソナ、目的別追加指示、NG事項/制約条件フィールド追加）
+- P2: 「ChatGPTで開く」「Claudeで開く」ボタン追加（コピー＆オープン）
+- P3: 生成履歴機能追加（localStorage、最新5件保持・復元・削除）
+- P4: ヘッダー説明文の途中切れを修正
+- P5: コピーボタンのUX改善（alert廃止→インライン「コピー済み！」通知）
+- P6: HowToスキーマをサービス固有の5ステップに更新
+- P7: manifest.json の short_name を「ai-prompt-de」→「AIプロンプト」に改善
 
 ## データ管理
 
