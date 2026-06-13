@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6366f1">
+  <title>AIプロンプト自動生成ツール【無料】| AI Prompt Designer</title>
+  <meta name="description" content="目的・ジャンル・出力形式を選ぶだけで効果的なAIプロンプトを自動生成。ChatGPT・Claude・Gemini対応。登録不要・完全無料。">
+  <meta name="author" content="AppADayCreator">
+  <link rel="canonical" href="https://appadaycreator.com/ai-prompt-designer/lp/">
+  <meta property="og:title" content="AIプロンプト自動生成ツール【無料】| AI Prompt Designer">
+  <meta property="og:description" content="目的・ジャンル・出力形式を選ぶだけで効果的なAIプロンプトを自動生成。ChatGPT・Claude・Gemini対応。登録不要・完全無料でご利用いただけます。">
+  <meta property="og:url" content="https://appadaycreator.com/ai-prompt-designer/lp/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://appadaycreator.com/assets/ogp-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIプロンプト自動生成ツール【無料】| AI Prompt Designer">
+  <meta name="twitter:description" content="目的・ジャンル・出力形式を選ぶだけで効果的なAIプロンプトを自動生成。ChatGPT・Claude・Gemini対応。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --primary-light: #818cf8;
+      --primary-bg: #eef2ff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --shadow: 0 4px 24px rgba(99,102,241,0.10);
+      --shadow-lg: 0 8px 40px rgba(99,102,241,0.18);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .nav-logo-icon {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .nav-logo-text {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    .nav-cta {
+      background: var(--primary);
+      color: white !important;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--primary-dark) !important; color: white !important; }
+
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #6366f1 0%, #4f46e5 40%, #7c3aed 100%);
+      color: white;
+      padding: 80px 24px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 700;
+      opacity: 0.9;
+      margin-top: 4px;
+    }
+
+    .hero-sub {
+      font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.85;
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+
+    .hero-ai-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .hero-ai-tag {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+      padding: 5px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 18px 40px;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: 700;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    }
+
+    .hero-btn-note {
+      display: block;
+      margin-top: 14px;
+      font-size: 13px;
+      opacity: 0.75;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 56px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-num {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 12px;
+      opacity: 0.75;
+      margin-top: 4px;
+    }
+
+    /* ===== SECTION COMMON ===== */
+    .section {
+      padding: 72px 24px;
+    }
+
+    .section-alt { background: white; }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      background: var(--primary-bg);
+      color: var(--primary);
+      padding: 4px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(22px, 3.5vw, 34px);
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-header .section-desc {
+      margin: 0 auto;
+    }
+
+    /* ===== FEATURES ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--primary-bg);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ===== HOW TO USE ===== */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      position: relative;
+    }
+
+    .step {
+      background: white;
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      margin: 0 auto 16px;
+    }
+
+    .step-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .step h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ===== USE CASES ===== */
+    .usecases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .usecase-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .usecase-icon {
+      font-size: 32px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .usecase-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .usecase-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ===== TEMPLATES ===== */
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .template-card {
+      background: white;
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+      text-align: center;
+      cursor: default;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .template-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .template-card .emoji { font-size: 32px; margin-bottom: 10px; }
+    .template-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .template-card p { font-size: 12px; color: var(--text-muted); }
+
+    .template-tag {
+      display: inline-block;
+      background: var(--primary-bg);
+      color: var(--primary);
+      padding: 2px 10px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    /* ===== SCORE SECTION ===== */
+    .score-wrapper {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .score-visual {
+      flex: 0 0 auto;
+      text-align: center;
+    }
+
+    .score-circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: conic-gradient(var(--primary) 0% 92%, #e2e8f0 92% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+      position: relative;
+    }
+
+    .score-circle-inner {
+      width: 104px;
+      height: 104px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .score-num {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .score-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .score-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .score-items {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .score-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .score-item-label {
+      font-size: 14px;
+      font-weight: 600;
+      width: 110px;
+      flex-shrink: 0;
+    }
+
+    .score-bar {
+      flex: 1;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .score-bar-fill {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    .score-val {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      width: 36px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      font-family: inherit;
+      transition: background 0.15s;
+    }
+
+    .faq-q:hover { background: var(--bg); }
+
+    .faq-q-text { flex: 1; text-align: left; }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--primary-bg);
+      color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    .faq-a {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-a { display: block; }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      background: linear-gradient(135deg, #6366f1 0%, #4f46e5 50%, #7c3aed 100%);
+      color: white;
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(24px, 4vw, 40px);
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .final-cta p {
+      font-size: 16px;
+      opacity: 0.85;
+      margin-bottom: 40px;
+    }
+
+    .final-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 18px 48px;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: 700;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .final-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.28);
+    }
+
+    .final-cta-note {
+      display: block;
+      margin-top: 16px;
+      font-size: 13px;
+      opacity: 0.7;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #1e293b;
+      color: #94a3b8;
+      padding: 36px 24px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #94a3b8;
+      text-decoration: none;
+    }
+
+    footer a:hover { color: white; }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      font-size: 13px;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        padding: 16px 24px;
+        gap: 16px;
+        z-index: 99;
+      }
+      .nav-hamburger { display: flex; }
+      .hero { padding: 56px 20px 72px; }
+      .hero-stats { gap: 24px; }
+      .section { padding: 52px 20px; }
+      .score-wrapper { justify-content: center; }
+      .steps { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 28px; }
+      .hero-btn { padding: 14px 28px; font-size: 16px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .usecases-grid { grid-template-columns: 1fr; }
+      .templates-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" role="navigation" aria-label="メインナビゲーション">
+  <div class="nav-inner">
+    <a href="/ai-prompt-designer/lp/" class="nav-logo">
+      <span class="nav-logo-icon">🤖</span>
+      <span class="nav-logo-text">AI Prompt Designer</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#features">特徴</a></li>
+      <li><a href="#howto">使い方</a></li>
+      <li><a href="#templates">テンプレート</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="/ai-prompt-designer/" class="nav-cta">無料で使う →</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">✨ 完全無料・登録不要・プロンプト生成ツール</div>
+    <h1>
+      AIプロンプト<br>自動生成ツール
+      <span>選ぶだけで、最高のプロンプトが完成</span>
+    </h1>
+    <p class="hero-sub">
+      目的・ジャンル・出力形式を選ぶだけで、<br>
+      ChatGPT・Claude・Gemini対応の効果的なプロンプトを瞬時に生成。
+    </p>
+    <div class="hero-ai-tags">
+      <span class="hero-ai-tag">ChatGPT</span>
+      <span class="hero-ai-tag">Claude</span>
+      <span class="hero-ai-tag">Gemini</span>
+      <span class="hero-ai-tag">Midjourney</span>
+      <span class="hero-ai-tag">GPT-4o</span>
+    </div>
+    <a href="/ai-prompt-designer/" class="hero-btn">
+      🚀 プロンプトを生成する
+    </a>
+    <span class="hero-btn-note">登録不要・完全無料 · 今すぐ使える</span>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">5,000+</div>
+        <div class="hero-stat-label">月間利用者数</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">50,000+</div>
+        <div class="hero-stat-label">プロンプト生成数</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">20+</div>
+        <div class="hero-stat-label">目的カテゴリ</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-label">対応AIツール</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="section section-alt" id="features">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">主な機能</span>
+      <h2 class="section-title">AIプロンプトをもっと<br>かんたん・高品質に</h2>
+      <p class="section-desc">
+        プロンプトエンジニアリングの知識がなくても、<br>選ぶだけで高品質なプロンプトが手に入ります。
+      </p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>目的別最適化</h3>
+        <p>文章作成・アイデア出し・要約・翻訳・コード生成など20以上の目的から選ぶだけで、最適なプロンプト構造を自動生成します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>AIツール対応</h3>
+        <p>ChatGPT・Claude・Gemini・Midjourney・GPT-4oなど各AIの特性に合わせた最適なプロンプトを生成。AIごとの使い方の違いを意識する必要がありません。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>即時生成・ワンクリックコピー</h3>
+        <p>数秒でプロンプトを生成し、ワンクリックでコピー。そのままChatGPTやClaudeに貼り付けるだけですぐに使えます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3>出力形式の指定</h3>
+        <p>箇条書き・表形式・段落文章・JSON・マークダウンなど、希望する出力形式を細かく指定できます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>完全プライベート</h3>
+        <p>すべてブラウザ内で処理。入力データはサーバーに送信・保存されません。プライバシーを守りながら安心して利用できます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>スマホ・PC完全対応</h3>
+        <p>スマートフォン・タブレット・PCすべてに対応。外出先でもかんたんにプロンプトを生成できます。PWAインストール対応。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW TO USE ===== -->
+<section class="section" id="howto">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">使い方</span>
+      <h2 class="section-title">3ステップで完成</h2>
+      <p class="section-desc">難しい操作は一切なし。選んで入力するだけ。</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon">🤖</div>
+        <h3>AIツールを選ぶ</h3>
+        <p>使いたいAI（ChatGPT・Claude・Geminiなど）を選択します。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon">🎯</div>
+        <h3>目的と形式を選ぶ</h3>
+        <p>やりたいこと（文章作成・コード生成など）と出力形式を選択します。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon">✨</div>
+        <h3>詳細を入力して生成</h3>
+        <p>具体的にやりたいことを入力し、ボタンを押すだけで高品質なプロンプトが完成。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-icon">📋</div>
+        <h3>コピーしてAIへ</h3>
+        <p>生成されたプロンプトをコピーして、ChatGPTやClaudeに貼り付けるだけで使用完了。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-icon">🔄</div>
+        <h3>条件を変えて試す</h3>
+        <p>条件を変えることで様々なパターンのプロンプトを試すことができます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEMPLATES ===== -->
+<section class="section section-alt" id="templates">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">テンプレートギャラリー</span>
+      <h2 class="section-title">100種以上のテンプレートから<br>すぐに使える</h2>
+      <p class="section-desc">あらゆるシーンに対応したテンプレートをご用意。目的に合わせて選ぶだけで高品質なプロンプトが完成します。</p>
+    </div>
+    <div class="templates-grid">
+      <div class="template-card">
+        <div class="emoji">✍️</div>
+        <h4>ブログ記事作成</h4>
+        <p>SEO対応の記事を素早く生成</p>
+        <span class="template-tag">文章作成</span>
+      </div>
+      <div class="template-card">
+        <div class="emoji">💼</div>
+        <h4>ビジネスメール</h4>
+        <p>丁寧で的確なビジネスメール</p>
+        <span class="template-tag">ビジネス</span>
+      </div>
+      <div class="template-card">
+        <div class="emoji">💻</div>
+        <h4>コード生成</h4>
+        <p>要件を伝えてコードを生成</p>
+        <span class="template-tag">エンジニア</span>
+      </div>
+      <div class="template-card">
+        <div class="emoji">📊</div>
+        <h4>データ分析</h4>
+        <p>データから洞察を引き出す</p>
+        <span class="template-tag">分析</span>
+      </div>
+      <div class="template-card">
+        <div class="emoji">🎨</div>
+        <h4>画像生成</h4>
+        <p>Midjourney用プロンプト</p>
+        <span class="template-tag">クリエイティブ</span>
+      </div>
+      <div class="template-card">
+        <div class="emoji">📚</div>
+        <h4>学習サポート</h4>
+        <p>概念をわかりやすく説明</p>
+        <span class="template-tag">学習</span>
+      </div>
+      <div class="template-card">
+        <div class="emoji">🌐</div>
+        <h4>翻訳・多言語</h4>
+        <p>自然な翻訳・ローカライズ</p>
+        <span class="template-tag">翻訳</span>
+      </div>
+      <div class="template-card">
+        <div class="emoji">💡</div>
+        <h4>アイデア出し</h4>
+        <p>新しいアイデアをどんどん生成</p>
+        <span class="template-tag">企画</span>
+      </div>
+      <div class="template-card">
+        <div class="emoji">📝</div>
+        <h4>要約・まとめ</h4>
+        <p>長文を簡潔にまとめる</p>
+        <span class="template-tag">要約</span>
+      </div>
+      <div class="template-card">
+        <div class="emoji">🛒</div>
+        <h4>商品説明</h4>
+        <p>魅力的な商品説明文を生成</p>
+        <span class="template-tag">マーケ</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUALITY SCORE ===== -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">プロンプト品質スコア</span>
+      <h2 class="section-title">プロが使う品質を、<br>誰でも即座に実現</h2>
+      <p class="section-desc">独自のスコアリングで、生成されたプロンプトの品質を可視化。92点以上の高品質プロンプトを常に提供します。</p>
+    </div>
+    <div class="score-wrapper">
+      <div class="score-visual">
+        <div class="score-circle">
+          <div class="score-circle-inner">
+            <span class="score-num">92</span>
+            <span class="score-label">品質スコア</span>
+          </div>
+        </div>
+        <div class="score-title">平均品質スコア</div>
+      </div>
+      <div class="score-items">
+        <div class="score-item">
+          <span class="score-item-label">明確さ・具体性</span>
+          <div class="score-bar"><div class="score-bar-fill" style="width:96%"></div></div>
+          <span class="score-val">96</span>
+        </div>
+        <div class="score-item">
+          <span class="score-item-label">AI最適化度</span>
+          <div class="score-bar"><div class="score-bar-fill" style="width:94%"></div></div>
+          <span class="score-val">94</span>
+        </div>
+        <div class="score-item">
+          <span class="score-item-label">出力品質</span>
+          <div class="score-bar"><div class="score-bar-fill" style="width:90%"></div></div>
+          <span class="score-val">90</span>
+        </div>
+        <div class="score-item">
+          <span class="score-item-label">再利用性</span>
+          <div class="score-bar"><div class="score-bar-fill" style="width:88%"></div></div>
+          <span class="score-val">88</span>
+        </div>
+        <div class="score-item">
+          <span class="score-item-label">カスタマイズ性</span>
+          <div class="score-bar"><div class="score-bar-fill" style="width:92%"></div></div>
+          <span class="score-val">92</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== USE CASES ===== -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">こんなシーンで使います</span>
+      <h2 class="section-title">あらゆる場面で<br>AIの力を最大化</h2>
+    </div>
+    <div class="usecases-grid">
+      <div class="usecase-card">
+        <div class="usecase-icon">🏢</div>
+        <div>
+          <h3>ビジネスパーソン</h3>
+          <p>資料作成・メール・報告書など日常業務を効率化。AIに指示する言葉が見つからなくなる問題を解決します。</p>
+        </div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon">✍️</div>
+        <div>
+          <h3>ライター・コンテンツ制作</h3>
+          <p>ブログ記事・SNS投稿・商品説明など、クオリティの高いコンテンツを素早く作成できます。</p>
+        </div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon">💻</div>
+        <div>
+          <h3>エンジニア・開発者</h3>
+          <p>コード生成・デバッグ・技術ドキュメント作成などを効率化。AIとのやりとりがスムーズになります。</p>
+        </div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon">📚</div>
+        <div>
+          <h3>学生・研究者</h3>
+          <p>レポート作成・学習サポート・研究補助など、アカデミックな場面でも活用できます。</p>
+        </div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon">🎨</div>
+        <div>
+          <h3>クリエイター</h3>
+          <p>画像生成AI用のプロンプトから動画スクリプトまで、クリエイティブな制作をサポートします。</p>
+        </div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon">🚀</div>
+        <div>
+          <h3>起業家・副業ワーカー</h3>
+          <p>限られた時間で最大の成果を上げたい方に。マーケティング・企画・営業まで幅広く対応。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">よくあるご質問</span>
+      <h2 class="section-title">FAQ</h2>
+    </div>
+    <div class="faq-list" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-text">AIプロンプト設計ツールは無料で使えますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">はい、完全無料・登録不要でご利用いただけます。ログインや個人情報の入力は一切必要ありません。</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-text">生成したプロンプトを商用利用できますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">生成されたプロンプトはご自由にご利用いただけます。商用利用も可能です。ただし、生成内容の最終確認はご自身でお願いします。</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-text">何回でも生成できますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">はい、回数制限なく何度でも生成いただけます。気に入ったプロンプトが見つかるまで、条件を変えながら繰り返し試せます。</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-text">生成データはサーバーに保存されますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">いいえ。すべてブラウザ内で処理されます。入力データやプロンプトはサーバーへ送信・保存されません。履歴はお使いのブラウザのlocalStorageにのみ保存されます。</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-text">スマートフォンで利用できますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">はい、PC・スマートフォン・タブレットすべてに対応しています。PWAとしてホーム画面に追加すれば、アプリのように使うことも可能です。</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-text">どのAIツールに対応していますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">ChatGPT・Claude・Gemini・Midjourney・GPT-4oに対応しています。各AIの特性に合わせた最適なプロンプト形式で生成します。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="section-inner">
+    <h2>今すぐ最高のプロンプトを作成</h2>
+    <p>登録不要・完全無料。選ぶだけでAIが使いやすくなる。</p>
+    <a href="/ai-prompt-designer/" class="final-cta-btn">
+      🚀 プロンプトを生成する（無料）
+    </a>
+    <span class="final-cta-note">登録不要 · 完全無料 · 即利用可能</span>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">🤖 AI Prompt Designer</div>
+    <div class="footer-links">
+      <a href="/ai-prompt-designer/">ツールを使う</a>
+      <a href="/ai-prompt-designer/usage.html">使い方</a>
+      <a href="/ai-prompt-designer/privacy-policy.html">プライバシーポリシー</a>
+      <a href="/ai-prompt-designer/terms.html">利用規約</a>
+      <a href="/contact.html">お問い合わせ</a>
+    </div>
+    <div class="footer-copy">© 2026 AppADayCreator. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  });
+</script>
+</body>
+</html>
